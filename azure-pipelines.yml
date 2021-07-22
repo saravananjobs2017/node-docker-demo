@@ -24,3 +24,4 @@ steps:
     repository: 'node-docker'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: 'latest'
