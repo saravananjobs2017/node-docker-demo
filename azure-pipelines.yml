@@ -14,19 +14,19 @@ steps:
   displayName: 'Run a one-line script'
 
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      set -x       
-      #!/bin/bash 
-      # Create keytab file
-      #user="SVC-SSMANDROID"
-      #pass='Mu!i^dC)n!B
-      #printf "%b" "addent -password -p SVC-SSMANDROID -k 1 -e RC4-HMAC\nMu!i^dC)n!B\nwkt SVC-SSMANDROID" | ktutil
-      printf "%b" "addent -password -p $(user) -k 1 -e RC4-HMAC\n$(pass)\nwkt $(user).keytab" | ktutil
-      printf "%b" "quit"
-      mv  $(user).keytab $(build.SourcesDirectory)/test/
+# - task: Bash@3
+#   inputs:
+#     targetType: 'inline'
+#     script: |
+#       set -x       
+#       #!/bin/bash 
+#       # Create keytab file
+#       #user="SVC-SSMANDROID"
+#       #pass='Mu!i^dC)n!B
+#       #printf "%b" "addent -password -p SVC-SSMANDROID -k 1 -e RC4-HMAC\nMu!i^dC)n!B\nwkt SVC-SSMANDROID" | ktutil
+#       printf "%b" "addent -password -p $(user) -k 1 -e RC4-HMAC\n$(pass)\nwkt $(user).keytab" | ktutil
+#       printf "%b" "quit"
+#       mv  $(user).keytab $(build.SourcesDirectory)/test/
     
 
 - script: |
