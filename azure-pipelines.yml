@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: my-tpc
+  name: sara-tpc
 
 steps:
 - script: echo Hello, world!
